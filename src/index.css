@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #020814;
+  /* background: linear-gradient(45deg, #0a0a0a, #00162c); */
+  color: white;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+  height: 75px;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links li {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  padding: 10px 0;
+  color: rgb(161, 161, 161);
+  transition: color 0.3s ease-in-out;
+}
+.nav-links li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: aqua;
+  content: "";
+  transition: width 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.nav-links li:hover {
+  cursor: pointer;
+  color: white;
+}
+.nav-links li:hover::before {
+  width: 100%;
+}
+
+.main-content {
+  padding: 15px;
+  height: calc(100vh - 85px);
+  position: relative;
+}
+.home-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1.35fr;
+  height: 90%;
+  width: 40%;
+  /* width: 40%; change this for responsivness on moblie and less */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-section img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* .main-content img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+}
+.lion {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.elephant {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+.rhino {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+.zebra {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+.hippo {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+.giraffe {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
