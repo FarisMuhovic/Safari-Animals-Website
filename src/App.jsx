@@ -8,12 +8,21 @@ function App() {
   const [animalData, setAnimalData] = React.useState([]);
   const [animal, setAnimal] = React.useState("");
   React.useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--selected-color",
+      animalData.length > 0 ? animalData[0].color : ""
+    );
+  }, [animalData]);
+  const [animalHovered, setAnimalHover] = React.useState("");
+  React.useEffect(() => {
     setAnimalData(() => {
       return data.flatMap(item => {
         return item.name.toLowerCase() === animal ? item : [];
       });
     });
   }, [animal]);
+  const [clickedchar, setclickedchar] = React.useState("overview");
+
   return (
     <div className="App">
       <Navbar
@@ -23,6 +32,8 @@ function App() {
         render={render}
         animal={animal}
         setAnimal={setAnimal}
+        setAnimalHover={setAnimalHover}
+        setclickedchar={setclickedchar}
       />
       <Main
         data={data}
@@ -31,6 +42,9 @@ function App() {
         render={render}
         animal={animal}
         setAnimal={setAnimal}
+        animalHovered={animalHovered}
+        setclickedchar={setclickedchar}
+        clickedchar={clickedchar}
       />
     </div>
   );

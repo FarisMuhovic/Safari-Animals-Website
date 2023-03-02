@@ -16,4 +16,8 @@ animals: lion elephant hippo zebra giraffe rhino
 
 #habitat and behavior
 
-#anatomy
+#anatomy add sound effects myb
+
+today todo list: finish animations. make click on link also hover animal and vice verca
+
+work: 8 + 6
