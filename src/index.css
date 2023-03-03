@@ -268,13 +268,13 @@ nav {
 .animal-info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   justify-content: space-between;
 }
 .info-heading {
   font-size: 65px;
   color: var(--selected-color);
-  transform: scaleY(1.2);
+  transform: scaleY(1.15);
   text-transform: uppercase;
 }
 .animal-desc {
@@ -288,7 +288,7 @@ nav {
   justify-content: space-between;
   height: 100%;
   position: relative;
-  min-height: 200px;
+  min-height: 225px;
 }
 .source-link {
   color: rgb(199, 199, 199);
@@ -333,7 +333,7 @@ nav {
 .cards div h4 {
   font-size: 24px;
   font-weight: 700;
-  transform: scaleY(1.2);
+  transform: scaleY(1.15);
 }
 .cards div p {
   color: rgb(156, 156, 156);
@@ -342,6 +342,12 @@ nav {
 }
 .info-image {
   grid-column: 1/ 2;
+  grid-row: 1/ 3;
+  padding: 25px 25px 15px 25px;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  transform: translateY(8px);
 }
 .chars {
   display: flex;

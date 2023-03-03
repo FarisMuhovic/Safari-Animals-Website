@@ -2,10 +2,11 @@ import React from "react";
 
 const Card = props => {
   const {name, cards, chars, facts} = props.data;
+  console.log(chars);
   const imgtag = chars.flatMap(item => {
     return props.clickedchar === item.name ? (
       <>
-        <img src="" alt={name} className="info-image" />
+        <img src={`/animals/${item.image}`} alt={name} className="info-image" />
       </>
     ) : (
       ""

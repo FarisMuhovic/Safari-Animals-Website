@@ -17,6 +17,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/african-lion",
         source_name: "natgeo",
+        image: "lion-1.jpg",
       },
       {
         name: "diet",
@@ -24,6 +25,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/african-lion",
         source_name: "natgeo",
+        image: "lion-2.jpg",
       },
       {
         name: "anatomy",
@@ -31,6 +33,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/african-lion",
         source_name: "natgeo",
+        image: "lion-3.jpg",
       },
     ],
 
@@ -60,18 +63,21 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/hippopotamus",
         source_name: "natgeo",
+        image: "hippo-1.jpg",
       },
       {
         name: "diet",
         text: "Hippos are definitely adapted for life in the water and are found living in slow-moving rivers and lakes in Africa.Hippos eat an average of only 40 kilograms of food a night. This amount is about 1 to 1.5 percent of their body weight.Hippos like to feed on patches of short grasses close to water,herbivore pellets, alfalfa and Bermuda hay, lettuce and mixed vegetables, and on special occasions, melons.",
         source: "https://animals.sandiegozoo.org/animals/hippo",
         source_name: "natgeo",
+        image: "hippo-2.jpg",
       },
       {
         name: "anatomy",
         text: "The hippopotamus has a very simple exterior. It is characterised by grey or brown thin; hairless skin; a small tail, a pink underbelly; a bulky; barrel-shaped body, short stumpy legs; webbed feet; folds of skin; small, brownish-pink ears and eyes; tusks, a large head, large muzzle; large closable nostrils and a large mouth that can open up to 1.2 metres.",
         source: "https://stluciasouthafrica.com/hippo-facts/hippo-anatomy/",
         source_name: "natgeo",
+        image: "hippo-3.jpg",
       },
     ],
     facts: [
@@ -100,6 +106,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/a/african-elephant/",
         source_name: "natgeo",
+        image: "elephant-1.jpg",
       },
       {
         name: "diet",
@@ -107,6 +114,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/a/african-elephant/",
         source_name: "natgeo",
+        image: "elephant-2.jpg",
       },
       {
         name: "anatomy",
@@ -114,6 +122,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/a/african-elephant/",
         source_name: "natgeo",
+        image: "elephant-3.jpg",
       },
     ],
     facts: [
@@ -143,6 +152,7 @@ export default [
           "https://www.nationalgeographic.com/animals/mammals/facts/plains-zebra",
 
         source_name: "natgeo",
+        image: "zebra-1.jpg",
       },
       {
         name: "diet",
@@ -150,6 +160,7 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/plains-zebra",
         source_name: "natgeo",
+        image: "zebra-2.jpg",
       },
       {
         name: "anatomy",
@@ -158,6 +169,7 @@ export default [
           "https://www.nationalgeographic.com/animals/mammals/facts/plains-zebra",
 
         source_name: "natgeo",
+        image: "zebra-3.jpg",
       },
     ],
 
@@ -187,16 +199,19 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/giraffe",
         source_name: "natgeo",
+        image: "giraffe-1.jpg",
       },
       {
         name: "diet",
         text: "Giraffes are herbivores and primarily feed on leaves, flowers, and fruits of trees and shrubs. They have a long tongue that they use to strip leaves from branches. They can go for weeks without drinking water, as they get most of their moisture from the leaves they eat.",
         source: "https://animals.sandiegozoo.org/animals/giraffe",
         source_name: "natgeo",
+        image: "giraffe-2.jpg",
       },
       {
         name: "anatomy",
         text: "Giraffes have very long necks, which are made up of seven vertebrae, just like humans. Their necks can be up to six feet long and are used for reaching food in high places and for fighting with other males during mating season. They have long, thin legs with hooves, which help them to run at speeds of up to 35 miles per hour. Their coat pattern is unique to each individual and is made up of irregular patches of tan, orange, and brown.",
+        image: "giraffe-3.jpg",
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/giraffe",
         source_name: "natgeo",
@@ -229,6 +244,7 @@ export default [
         text: "Rhinoceroses, also known as rhinos, are large, herbivorous mammals that are native to Africa and Asia. There are five different species of rhinos, and all of them are listed as either vulnerable or critically endangered due to habitat loss and poaching. Rhinos are known for their distinctive horns, which are made of keratin. Despite their size, rhinos can run up to 30 miles per hour.",
         source: "https://www.worldwildlife.org/species/rhino",
         source_name: "worldwildlife",
+        image: "rhino-1.jpg",
       },
       {
         name: "diet",
@@ -236,12 +252,14 @@ export default [
         source:
           "https://www.nationalgeographic.com/animals/mammals/r/rhinoceros/",
         source_name: "worldwildlife",
+        image: "rhino-2.jpg",
       },
       {
         name: "anatomy",
         text: "Rhinos have a distinctive appearance, with thick, gray skin and large, sharp horns on their noses. They have relatively small eyes and ears compared to their large size, and they rely heavily on their sense of smell to navigate their environment. . The horns on a rhino's nose are made of keratin—the same protein that makes up human hair and nails—and are used for defense and foraging.",
         source: "https://www.britannica.com/animal/rhinoceros-mammal",
         source_name: "worldwildlife",
+        image: "rhino-3.jpg",
       },
     ],
 
