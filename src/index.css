@@ -1076,6 +1076,10 @@ nav {
     font-size: 42px;
     color: white;
   }
+  .fun-fact-btn,
+  .fun-fact-text {
+    display: none;
+  }
   nav {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
