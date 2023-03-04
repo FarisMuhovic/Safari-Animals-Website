@@ -3,10 +3,17 @@ import Card from "./Card";
 
 const Main = props => {
   const [imageLoaded, setImageLoaded] = React.useState(false);
-
   function renderAnimal(e) {
-    props.setAnimal(e.target.alt.toLowerCase());
-    props.setRender(true);
+    props.sethomeAnimation(true);
+    props.setotherAnimalAnimations(true);
+    props.setShowFacts(false);
+    setTimeout(() => {
+      props.setAnimal(e.target.alt.toLowerCase());
+      props.setRender(true);
+      props.setclickedchar("overview");
+      props.setcancel(false);
+      props.setotherAnimalAnimations(false);
+    }, 1300);
   }
 
   return (
@@ -15,7 +22,7 @@ const Main = props => {
         <div
           className={`home-section smooth-image image-${
             imageLoaded ? "visible" : "hidden"
-          }`}
+          } ${props.homeAnimation ? "reverse-load-home" : ""}`}
           onLoad={() => setImageLoaded(true)}
         >
           <img
@@ -48,6 +55,12 @@ const Main = props => {
           data={props.animalData[0]}
           setclickedchar={props.setclickedchar}
           clickedchar={props.clickedchar}
+          animations={props.animations}
+          key={props.animalData[0].id}
+          otherAnimalAnimations={props.otherAnimalAnimations}
+          setotherAnimalAnimations={props.setotherAnimalAnimations}
+          showFacts={props.showFacts}
+          setShowFacts={props.setShowFacts}
         />
       )}
     </div>

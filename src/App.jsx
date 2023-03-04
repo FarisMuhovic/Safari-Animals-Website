@@ -21,8 +21,17 @@ function App() {
       });
     });
   }, [animal]);
+  const [showFacts, setShowFacts] = React.useState(false);
+
   const [clickedchar, setclickedchar] = React.useState("overview");
 
+  // * Animations
+  const animation_duration = 1350 - 10;
+  const [animations, setAnimations] = React.useState(false);
+  const [cancel, setcancel] = React.useState(false);
+  const [homeAnimation, sethomeAnimation] = React.useState(false);
+  const [otherAnimalAnimations, setotherAnimalAnimations] =
+    React.useState(false);
   return (
     <div className="App">
       <Navbar
@@ -34,6 +43,15 @@ function App() {
         setAnimal={setAnimal}
         setAnimalHover={setAnimalHover}
         setclickedchar={setclickedchar}
+        setAnimations={setAnimations}
+        cancel={cancel}
+        setcancel={setcancel}
+        sethomeAnimation={sethomeAnimation}
+        otherAnimalAnimations={otherAnimalAnimations}
+        setotherAnimalAnimations={setotherAnimalAnimations}
+        animation_duration={animation_duration}
+        showFacts={showFacts}
+        setShowFacts={setShowFacts}
       />
       <Main
         data={data}
@@ -42,9 +60,20 @@ function App() {
         render={render}
         animal={animal}
         setAnimal={setAnimal}
+        setAnimations={setAnimations}
         animalHovered={animalHovered}
         setclickedchar={setclickedchar}
         clickedchar={clickedchar}
+        animations={animations}
+        setcancel={setcancel}
+        cancel={cancel}
+        sethomeAnimation={sethomeAnimation}
+        homeAnimation={homeAnimation}
+        otherAnimalAnimations={otherAnimalAnimations}
+        setotherAnimalAnimations={setotherAnimalAnimations}
+        animation_duration={animation_duration}
+        showFacts={showFacts}
+        setShowFacts={setShowFacts}
       />
     </div>
   );

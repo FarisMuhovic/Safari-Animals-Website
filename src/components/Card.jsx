@@ -2,28 +2,66 @@ import React from "react";
 
 const Card = props => {
   const {name, cards, chars, facts} = props.data;
-  console.log(chars);
-  const imgtag = chars.flatMap(item => {
+  const imgtag = chars.flatMap((item, index) => {
     return props.clickedchar === item.name ? (
-      <>
-        <img src={`/animals/${item.image}`} alt={name} className="info-image" />
-      </>
+      <div className="animal-image-container">
+        {props.showFacts && (
+          <div className="fun-fact-text ">
+            <ul>
+              {facts.map(item => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+          </div>
+        )}
+        <img
+          src={`/animals/${item.image}`}
+          key={index}
+          alt={name}
+          className={`info-image ${
+            props.animations ? "reverse-animations" : ""
+          } ${
+            props.otherAnimalAnimations
+              ? "reverse-animations-other-animals"
+              : ""
+          }`}
+        />
+      </div>
     ) : (
       ""
     );
   });
-  const elements = chars.flatMap(item => {
+  const [changeChar, setChangeChar] = React.useState(false);
+  const elements = chars.flatMap((item, index) => {
     return props.clickedchar === item.name ? (
       <>
-        <div className="animal-info">
+        <div
+          className={`animal-info ${
+            props.otherAnimalAnimations ? "animal-info-out" : ""
+          }`}
+          key={index}
+        >
           <h1 className="info-heading">{name}</h1>
-          <p className="animal-desc">{item.text}</p>
+          <p
+            className={`animal-desc ${
+              changeChar ? "animation-animal-description" : ""
+            }`}
+          >
+            {item.text}
+          </p>
           <p className="source-link">
-            Source:
             <a href={item.source} target="_blank">
-              {item.source_name}
+              Source: {item.source_name}
               <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
+            <button
+              className="fun-fact-btn"
+              onClick={() => {
+                props.setShowFacts(prevval => !prevval);
+              }}
+            >
+              Fun Facts
+            </button>
           </p>
         </div>
       </>
@@ -31,34 +69,45 @@ const Card = props => {
       ""
     );
   });
-
   return (
     <div className="info-section">
       {imgtag}
-      <div className="text-area">{elements}</div>
-      <div className="chars">
-        {chars.map((item, index) => {
-          return (
-            <button
-              className={
-                props.clickedchar === item.name ? "focused-chars-btn" : ""
-              }
-              onClick={e => {
-                console.log(e.target);
+      <div className={`text-area `}>
+        {elements}
+        <div
+          className={`chars ${
+            props.otherAnimalAnimations ? "animal-info-out" : ""
+          }`}
+        >
+          {chars.map((item, index) => {
+            return (
+              <button
+                key={index}
+                className={`
+                  ${
+                    props.clickedchar === item.name ? "focused-chars-btn" : ""
+                  } `}
+                onClick={e => {
+                  props.setShowFacts(false);
+                  setChangeChar(true);
+                  props.setclickedchar(
+                    e.target.innerText.toLowerCase().substring(3)
+                  );
+                }}
+              >
+                {`0${index + 1} `}
 
-                props.setclickedchar(
-                  e.target.innerText.toLowerCase().substring(3)
-                );
-              }}
-            >
-              {`0${index + 1} `}
-
-              {item.name}
-            </button>
-          );
-        })}
+                {item.name}
+              </button>
+            );
+          })}
+        </div>
       </div>
-      <div className="cards">
+      <div
+        className={`cards ${
+          props.animations ? "reverse-animation-cards" : ""
+        } ${props.otherAnimalAnimations ? "reverse-animation-cards" : ""}`}
+      >
         <div className="class">
           <p>Class</p>
           <h4>{cards.class}</h4>

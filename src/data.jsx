@@ -211,10 +211,10 @@ export default [
       {
         name: "anatomy",
         text: "Giraffes have very long necks, which are made up of seven vertebrae, just like humans. Their necks can be up to six feet long and are used for reaching food in high places and for fighting with other males during mating season. They have long, thin legs with hooves, which help them to run at speeds of up to 35 miles per hour. Their coat pattern is unique to each individual and is made up of irregular patches of tan, orange, and brown.",
-        image: "giraffe-3.jpg",
         source:
           "https://www.nationalgeographic.com/animals/mammals/facts/giraffe",
         source_name: "natgeo",
+        image: "giraffe-3.jpg",
       },
     ],
 
